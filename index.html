@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyansh - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+          <nav>
+            <a href="#" class="logo">Priyansh Mankotia</a>
+            <ul class="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#training">Training</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#achievements">Achievements</a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      
+    <!-- Home Section Refactor | Image left – Text right (v4) -->
+<section id="home">
+    <div class="container home-grid">
+      <!-- LEFT: Profile Image -->
+      <div class="profile-box">
+        <img src="/images/1672328721868.jpg" alt="Priyansh" class="profile-img" />
+      </div>
+  
+      <!-- RIGHT: Content -->
+      <div class="intro-box">
+        <h1 class="main-name"><span class="type">Hi, I'm Priyansh</span></h1>
+        <p class="about-content">
+          A passionate <strong>Computer Science and Engineering</strong> student at
+          <strong>Lovely Professional University</strong> with a strong foundation in
+          <strong>Full‑Stack Development</strong> and <strong>Data Structures & Algorithms</strong>.
+          I focus on building scalable applications using the MERN stack with a love for both
+          front‑end and back‑end.
+        </p>
+  
+        <!-- Contact Info -->
+        <ul class="contact-info">
+          <li><i class="fas fa-phone"></i> +91 7650057013</li>
+          <li><i class="fas fa-envelope"></i> priyanshmankotia26@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Dalhousie, Himachal Pradesh 176304</li>
+        </ul>
+  
+        <!-- Social Icons -->
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/priyansh-mankotia26/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Priyansh132621" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+  
+        <!-- Download CV -->
+        <a href="cv/Priyansh GeneralCvUpdation.pdf" class="download-btn" download>Download CV</a>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    :root {
+      --clr-bg: #ffffff;
+      --clr-accent: #2ecc71;
+      --clr-primary: #3498db;
+      --clr-text: #2c3e50;
+      --clr-muted: #566573;
+      --clr-shadow: rgba(0, 0, 0, 0.08) 0 4px 20px;
+    }
+  
+    #home { background: var(--clr-bg); color: var(--clr-text); padding: 120px 0; }
+  
+    .home-grid { display: grid; grid-template-columns: 340px 1fr; align-items: center; gap: 60px; max-width: 1100px; margin: 0 auto; }
+  
+    .profile-img { width: 340px; height: 340px; object-fit: cover; border: 8px solid var(--clr-primary); box-shadow: var(--clr-shadow); animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0) scale(1);} 50%{transform:translateY(-12px) scale(1.03);} }
+  
+    /* Typing animation */
+    .type { display: inline-block; overflow: hidden; white-space: nowrap; border-right: 3px solid var(--clr-primary); animation: typing 3.5s steps(20,end) infinite, blink 0.75s step-end infinite; }
+    @keyframes typing { 0% { width: 0; } 30% { width: 19ch; } 60% { width: 19ch; } 100% { width: 0; } }
+    @keyframes blink { 0%, 100% { border-color: transparent; } 50% { border-color: var(--clr-primary); } }
+  
+    .main-name { font-size: 2.9rem; margin-bottom: 16px; font-weight: 600; }
+    .about-content { line-height: 1.6; color: var(--clr-muted); margin-bottom: 30px; }
+  
+    .contact-info { list-style: none; padding: 0; margin: 0 0 28px 0; }
+    .contact-info li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 1rem; }
+    .contact-info i { color: var(--clr-primary); }
+  
+    .social-links { display: flex; gap: 18px; margin-bottom: 30px; }
+    .social-links a { width: 46px; height: 46px; background: var(--clr-primary); display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #fff; transition: transform 0.3s, background 0.3s; }
+    .social-links a:hover { transform: translateY(-4px) scale(1.05); background: var(--clr-accent); }
+  
+    .download-btn { display: inline-block; background: var(--clr-accent); color: #ffffff; padding: 14px 34px; border-radius: 8px; font-weight: 600; text-decoration: none; box-shadow: var(--clr-shadow); transition: background 0.3s, transform 0.3s; }
+    .download-btn:hover { background: #27ae60; transform: translateY(-3px); }
+  
+    @media (max-width: 768px) {
+      .home-grid { grid-template-columns: 1fr; text-align: center; }
+      .intro-box { text-align: center; }
+      .profile-img { width: 280px; height: 280px; margin: 0 auto 30px; }
+      .social-links a { border-radius: 50%; }
+    }
+  </style>
+  
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/27/2/c-logo-png_seeklogo-272951.png"
+                                alt="C++">
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/27/2/java-logo-png_seeklogo-273556.png"
+                                alt="Java">
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/27/2/javascript-js-logo-png_seeklogo-273557.png"
+                                alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/45/2/c-language-logo-png_seeklogo-458623.png"
+                                alt="C">
+                            <span>C</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <img src="https://image.shutterstock.com/image-photo/image-260nw-2097690409.jpg"
+                                alt="React JS">
+                            <span>React JS</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/18/2/html5-without-wordmark-color-logo-png_seeklogo-184157.png"
+                                alt="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/42/2/css-3-logo-png_seeklogo-426083.png"
+                                alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/35/2/tailwind-css-logo-png_seeklogo-354675.png"
+                                alt="Tailwind CSS">
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/27/2/node-js-logo-png_seeklogo-273750.png"
+                                alt="Node JS">
+                            <span>Node JS</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/33/2/express-js-logo-png_seeklogo-339850.png"
+                                alt="Express JS">
+                            <span>Express JS</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/10/2/php-logo-png_seeklogo-108600.png"
+                                alt="PHP">
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/27/2/mongodb-logo-png_seeklogo-273731.png"
+                                alt="MongoDB">
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Other Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <img src="https://w7.pngwing.com/pngs/125/653/png-transparent-algorithms-data-structures-programs-data-structures-and-algorithms-introduction-to-algorithms-others-miscellaneous-angle-computer-science-thumbnail.png"
+                                alt="DSA">
+                            <span>Data Structures & Algorithms</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://w7.pngwing.com/pngs/615/978/png-transparent-developer-development-object-oriented-programming-software-technology-icon-thumbnail.png"
+                                alt="OOP">
+                            <span>Object Oriented Programming</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/27/2/git-logo-png_seeklogo-273180.png"
+                                alt="Git">
+                            <span>Git & GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://images.seeklogo.com/logo-png/32/2/visual-studio-code-logo-png_seeklogo-323431.png"
+                                alt="VS Code">
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project-container">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3 class="project-title">Photography Portfolio Website:</h3>
+                        <p class="experience-date">September 2024 – December 2024</p>
+                        <p><strong>Tech Stack:</strong> ReactJS, HTML5, CSS3, MongoDB</p>
+                        <ul class="project-desc">
+                            <li>Photography displaying platform.</li>
+                            <li>Built with Next.js, Node.js, Tailwindcss.</li>
+                            <li>Includes user auth and admin dashboard.</li>
+                        </ul>
+                        <p class="project-tech">
+                            <a href="https://github.com/anmol0805/Job-Hunt" target="_blank">GitHub Repository</a>
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="imagesO/Photography.png" alt="Job Hunt Project Screenshot"
+                            class="project-img">
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3 class="project-title">CarDekho</h3>
+                        <p class="experience-date">August 2024 – September 2024</p>
+                        <p><strong>Tech Stack:</strong> MERN Stack</p>
+                        <ul class="project-desc">
+                            <li>Seamless appointment booking system for patients.</li>
+                            <li>Built with React, JavaScript, Node.js.</li>
+                            <li>Fully responsive UI and admin dashboard.</li>
+                        </ul>
+                        <p class="project-tech">
+                            <a href="https://github.com/anmol0805/Car-Booking" target="_blank">GitHub Repository</a>
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="imagesO/DentalClinic.png" alt="Car Booking Project Screenshot"
+                            class="project-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <p class="education-date">2022 - Present</p>
+                    <h3 class="education-title">Lovely Professional University, Punjab</h3>
+                    <p class="education-subtitle">B.Tech in Computer Science and Engineering</p>
+                    <p class="education-desc">CGPA: 7.46</p>
+                </div>
+                <div class="education-item">
+                    <p class="education-date">2020 - 2021</p>
+                    <h3 class="education-title">Grateway Public School Sujal</h3>
+                    <p class="education-subtitle">12th with Science</p>
+                    <p class="education-desc">Percentage: 89.9%</p>
+                </div>
+                <div class="education-item">
+                    <p class="education-date">2017 - 2018</p>
+                    <h3 class="education-title">Sacred Heart Senior Secondary School Dalhousie</h3>
+                    <p class="education-subtitle">10th</p>
+                    <p class="education-desc">Percentage: 83.6%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="training">
+        <div class="container">
+            <h2 class="section-title">Training</h2>
+
+            <div class="training-row">
+                <!-- Left: Training Description -->
+                <div class="training-info">
+                    <h3 class="training-title">CipherSchools - Full-Stack Development Using MERN Stack</h3>
+                    <p class="training-date">July 2024</p>
+                    <ul class="training-desc">
+                        <li>Mastered MERN stack technologies, building a solid foundation in MongoDB, Express.js, React.js, and Node.js for scalable web app development.</li>
+                        <li>Developed and deployed multiple real-world projects, applying best practices in full-stack architecture and clean code principles.</li>
+                        <li>Implemented RESTful APIs and authentication systems, enhancing backend logic and frontend-user interactions with optimized UI/UX.</li>
+                    </ul>
+                    <a href="https://drive.google.com/file/d/1uHjtHp8Vwj5Yu9pn58aTWROo5WVm0Y5z/view?usp=sharing" target="_blank">Link</a>
+                </div>
+
+                <!-- Right: Certificate Image -->
+                <div class="training-image">
+                    <img src="imagesO/cipherSchools.png" alt="GFG DSA Certificate" class="training-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+
+            <div class="cert-grid">
+
+                <!-- Certificate 1 -->
+                <div class="cert-card">
+                    <img src="imagesO/nptel.png" alt="Node.js Certificate" class="cert-img">
+                    <div class="cert-info">
+                        <h3 class="cert-title">Cloud Computing NPTEL</h3>
+                        <a href="https://drive.google.com/file/d/1SPmQx2lKq09AE-nq05LGpgMHNabSbr5b/view?usp=sharing"
+                            target="_blank">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="cert-card">
+                    <img src="imagesO/server side scripting.png" alt="C++ Certificate" class="cert-img">
+                    <div class="cert-info">
+                        <h3 class="cert-title">Server side JavaScript with Node.js</h3>
+                        <a href="https://drive.google.com/file/d/1E24-wd8uaJbkYL7A9cRfpgtcwp3hECVu/view?usp=sharing"
+                            target="_blank">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="cert-card">
+                    <img src="imagesO/html,Css.png" alt="Node.js Certificate" class="cert-img">
+                    <div class="cert-info">
+                        <h3 class="cert-title">HTML, CSS, and Javascript for Web Developers</h3>
+                        <a href="https://drive.google.com/file/d/1qaj0_Yxa1T4rnNnx4OlVevqhPZC197vr/view?usp=sharing"
+                            target="_blank">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- You can add more cards below in the same pattern -->
+
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+          <h2 class="section-title">Achievements</h2>
+      
+          <div class="achievement-card">
+            <!-- LEFT : looping video -->
+            <div class="card-left">
+              <video
+                src="cv/Basketball.2.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                class="achievement-video"
+              ></video>
+            </div>
+      
+            <!-- RIGHT : image + text -->
+            <div class="card-right">
+              <h3 class="achievement-title">
+               Excellence in Basketball
+              </h3>
+      
+              <p class="achievement-desc">
+                Recognized for consistent sports excellence and active participation
+                in extra‑curricular activities at school events and competitions.
+              </p>
+      
+            </div>
+          </div>
+        </div>
+      </section>
+      
+</body>
+</html>      
